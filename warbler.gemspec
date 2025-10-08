@@ -28,7 +28,7 @@ bundle up all of your application files for deployment to a Java environment.}
 
   gem.required_ruby_version = ">= 3.1"
 
-  gem.add_runtime_dependency 'rake', ['>= 13.0.3']
+  gem.add_runtime_dependency 'rake', ['~> 13.0', '>= 13.0.3']
   gem.add_runtime_dependency 'rexml', '~> 3.0'
   gem.add_runtime_dependency 'jruby-jars', ['>= 9.0.0']
   gem.add_runtime_dependency 'jruby-rack', ['>= 1.1.1', '< 1.3']
