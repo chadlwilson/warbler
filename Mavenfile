@@ -19,7 +19,6 @@ end
 properties(
   'project.build.sourceEncoding' => 'UTF-8',
   'jruby.plugins.version' => '3.0.6',
-  'jruby.version' => '9.4.14.0',
   'jetty.version' => '9.4.58.v20250814',
   'bundler.version' => '2.6.3',
 )
