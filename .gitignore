@@ -11,6 +11,8 @@ warbler.iml
 warbler.iws
 warbler.ipr
 warbler-*.gem
+.polyglot.Mavenfile
+pom.warbler.gemspec.xml
 log
 integration/**/*.iml
 build.log
