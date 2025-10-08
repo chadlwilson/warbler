@@ -44,7 +44,7 @@ jobs:
       - name: Set up java ${{ matrix.java-version }}
         uses: actions/setup-java@v3
         with:
-          distribution: zulu
+          distribution: temurin
           java-version: ${{ matrix.java-version }}
 
       - name: Set up ${{ matrix.ruby-version }}
@@ -55,7 +55,7 @@ jobs:
       - name: Remove jruby-launcher # not sure where this is coming from but causes some specs to fail
         run: gem uninstall -a jruby-launcher
 
-      - name: Remove jruby-launcher # not sure where this is coming from but causes some specs to fail
+      - name: Set up bundler ${{ matrix.bundler-version }}
         run: gem install bundler -v ${{ matrix.bundler-version }}
 
       - name: Install dependencies
