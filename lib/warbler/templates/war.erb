@@ -17,3 +17,5 @@ else
   ENV['BUNDLE_GEMFILE'] ||= $servlet_context.getRealPath('/<%= config.bundler[:gemfile_path] %>')
 <% end -%>
 end
+<%# Ensure any cached paths are cleared; otherwise behaviour can be indeterminate if the paths have already been read %>
+Gem.clear_paths
