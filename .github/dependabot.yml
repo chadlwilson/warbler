@@ -1,0 +1,35 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+    groups:
+      actions-deps:
+        patterns: [ "*" ]
+    commit-message:
+      prefix: "chore(deps): "
+  - package-ecosystem: maven
+    directory: "/integration"
+    schedule:
+      interval: monthly
+    groups:
+      maven-test-deps:
+        patterns: [ "*" ]
+    commit-message:
+      prefix: "test(deps): "
+  - package-ecosystem: bundler
+    directories:
+      - "/"
+    schedule:
+      interval: monthly
+    allow:
+      - dependency-type: all
+    groups:
+      ruby-deps:
+        dependency-type: "production"
+      ruby-dev-deps:
+        dependency-type: "development"
+    commit-message:
+      prefix: "build(deps): "
+      prefix-development: "chore(deps): "
