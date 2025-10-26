@@ -6,6 +6,8 @@
 # See the file LICENSE.txt for details.
 #++
 
+raise "Warbler must be built/used with JRuby: try again with 'jruby -S rake'" unless defined?(JRUBY_VERSION)
+
 require 'bundler/gem_helper'
 Bundler::GemHelper.install_tasks :dir => File.dirname(__FILE__)
 
