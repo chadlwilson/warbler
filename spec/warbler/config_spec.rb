@@ -37,7 +37,7 @@ describe Warbler::Config do
     it "should have suitable default values" do
       config = Warbler::Config.new
       expect(config.dirs).to include(*Warbler::Config::TOP_DIRS.select{|d| File.directory?(d)})
-      expect(config.excludes).to be_empty
+      expect(config.excludes.to_a).to eql ['.bundle/gems', '.bundle/gems/**/*'] # Bundler trait matched for warbler itself, and we use BUNDLE_PATH which gets excluded by default
       expect(config.java_libs).to_not be_empty
       expect(config.jar_name.size).to be_positive
       expect(config.webxml).to be_kind_of(OpenStruct)

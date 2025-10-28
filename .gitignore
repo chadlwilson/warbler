@@ -1,11 +1,11 @@
-!spec/rails7_stub/Gemfile.lock
 *.sqlite3-*
-.bundle
+.bundle/gems
 .idea
 .polyglot.Mavenfile
 .rspec_status
 .ruby-version
 Gemfile.lock
+!spec/rails7_stub/Gemfile.lock
 build.log
 coverage*
 doc
